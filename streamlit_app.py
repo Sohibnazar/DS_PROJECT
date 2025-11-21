@@ -11,3 +11,6 @@ with st.expander("Data"):
 
 with st.expander("Visualisation"):
   st.scatter_chart(data=df, x='bill_length_mm',y='bill_depth_mm', color='species')
+
+with st.sidebar:
+  st.header('Input features')
