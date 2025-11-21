@@ -4,5 +4,5 @@ st.title('😂😂😂MY FIRST PROJECT')
 
 st.write('Lets do it!')
 with st.expander("Data"):
-  st.write('**OUR DAT**')
+  st.write('**OUR DATA**')
   
