@@ -9,5 +9,5 @@ with st.expander("Data"):
   df
 
 
-with st.expander("Visualisation")
+with st.expander("Visualisation"):
   st.scatter_chart(data=df, x='bill_length_mm',y='bill_depth_mm', color='species')
