@@ -14,3 +14,4 @@ with st.expander("Visualisation"):
 
 with st.sidebar:
   st.header('Input features')
+  island = st.selectbox('Island', {'Torgesen', 'Dream', 'Biscoe'})
