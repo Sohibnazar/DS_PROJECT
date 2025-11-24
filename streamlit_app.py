@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from sklearn.ansemble import RandomForestClassifier
+
 st.title('😂😂😂MY FIRST PROJECT')
 
 st.write('Lets do it!')
@@ -41,8 +43,7 @@ with st.expander("Input features"):
 encode = ['island', 'sex']
 
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
-
-
+ 
 target_mapper={'Adelie':0,
                'Gentoo': 1,
                 'Chinstrap':2}
@@ -60,3 +61,17 @@ with st.expander('Data preparation'):
   st.write("**Encoded X**")
   input_raw
 
+
+# Model training
+clf = RandomForestClassifier()
+clf.fit(X,y)
+
+# Apply model for input_df
+prediction = clf.predict(input_raw)
+prediction_proba = clf.predict_proba(input_raw)
+
+df_prediction = pd.DataFrame(prediction_proba)
+df_prediction.columns = ['Adelie', 'Gentoo', 'Chinstrap']
+df_prediction.rename(columns = {0:'Adelie' ,
+               1:'Gentoo',
+                2: 'Chinstrap' })
