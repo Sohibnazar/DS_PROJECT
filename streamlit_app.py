@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.ansemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 st.title('😂😂😂MY FIRST PROJECT')
 
