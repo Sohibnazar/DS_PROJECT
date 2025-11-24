@@ -44,7 +44,7 @@ df_penguins = pd.get_dummies(input_penguins, prefix=encode)
 
 
 target_mapper={'Adelie':0,
-               'Gento': 1,
+               'Gentoo': 1,
                 'Chinstrap':2}
 
 def target_encode(val):
